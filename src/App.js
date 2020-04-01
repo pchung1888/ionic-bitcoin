@@ -12,7 +12,6 @@ import LoadingCard from './component/LoadingCard/LoadingCard';
 import BitcoinCard from './component/BitcoinCard/BitcoinCard';
 import { logoBitcoin } from 'ionicons/icons';
 function App() {
-
   const [bitcoinInfo, setBitcoinInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
