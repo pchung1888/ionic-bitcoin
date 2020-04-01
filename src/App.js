@@ -23,7 +23,6 @@ function App() {
       })
       .catch(error => console.log(error));
   }, []);
-  console.log({bitcoinInfo, isLoading})
 
   const createLoadingCards = () => {
     return (
