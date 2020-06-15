@@ -10,6 +10,7 @@ import { IonApp,
         } from '@ionic/react';
 import LoadingCard from './component/LoadingCard/LoadingCard';
 import BitcoinCard from './component/BitcoinCard/BitcoinCard';
+import TranslationCard from './component/TranslationCard/TranslationCard';
 import { logoBitcoin } from 'ionicons/icons';
 function App() {
   const [bitcoinInfo, setBitcoinInfo] = useState({});
@@ -33,10 +34,19 @@ function App() {
       </div>
     )
   }
-
   const createBitcoinCards = () => Object.keys(bitcoinInfo.bpi)
     .map((item, index) => <BitcoinCard data={bitcoinInfo.bpi[item]} />);
-    
+
+
+  const createTranslationCard = () => {
+    return (
+      <div>
+        <TranslationCard/>
+      </div>
+    )
+  }
+
+
   return (
     <IonApp>
       <IonHeader>
@@ -52,9 +62,12 @@ function App() {
         </section>
         {
           isLoading === true ?
-          createLoadingCards() : 
+          createLoadingCards() :
           createBitcoinCards()
         }
+        <section>
+         { createTranslationCard() }
+        </section>
         <section className="bitcoin__disclaimer" > <p> { bitcoinInfo.disclaimer } </p></section>
       </IonContent>
     </IonApp>

@@ -5,6 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
+// import i18n (needs to be bundled ;))
+import './i18n';
 ReactDOM.render(
   <React.StrictMode>
     <App />
